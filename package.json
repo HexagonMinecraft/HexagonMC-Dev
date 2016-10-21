@@ -1,0 +1,25 @@
+{
+  "name": "hexagonmc-dev",
+  "version": "1.0.0",
+  "description": "HexagonMC Dev Hub",
+  "main": "Gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "start": "node node_modules/gulp/bin/gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HexagonMinecraft/HexagonMC-Dev.git"
+  },
+  "author": "Noah Prail <me@nprail.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HexagonMinecraft/HexagonMC-Dev/issues"
+  },
+  "homepage": "https://github.com/HexagonMinecraft/HexagonMC-Dev#readme"
+}

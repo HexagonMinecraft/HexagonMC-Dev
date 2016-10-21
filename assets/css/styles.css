@@ -15,7 +15,6 @@ body{
 }
 .navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus{
     color:#FFFFFF!important;
-    text-decoration:underline;
 }
 .navbar-inverse .navbar-nav>li>a{
     color:#FFFFFF!important;
@@ -34,11 +33,12 @@ body{
 .jumbotron{
     background-color:#616060;
     color:#FFFFFF;
+    padding: 100px;
 }
 .jumbotron h1{
     color:#FFFFFF;
 }
-.spigot-logo{
+.logo{
     margin-top:50px;
 }
 .box{
@@ -49,32 +49,21 @@ body{
     display:block;
     margin-top:60px;
     margin-bottom:30px;
-    height:300px;
-    max-height:300px;
 }
 .box-icon{
-    background-color:#519448;
     border-radius:50%;
     display:table;
     height:100px;
     margin:0 auto;width:100px;margin-top:-61px;
 }
 .box-icon span{
-    color:#fff;
+    color:#000;
     display:table-cell;
     text-align:center;
     vertical-align:middle;
 }
-.site-info h4{
-    font-size:26px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-}
 .site-info>p{
-    color:#717171;
     font-size:16px;
     padding-top:10px;
     text-align:justify;
-    height:125px;
-    max-height:125px;
 }
