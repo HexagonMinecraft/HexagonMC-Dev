@@ -17,30 +17,24 @@ angular.module('app.controllers', ['app.services'])
             return text;
         };
     })
-    .controller('SpigotCtrl', function ($scope, $filter) {
-        $scope.creds = {
-            bucket: 'spigot.download',
-            access_key: 'AKIAIBQRHTAIVLW5PM5A',
-            secret_key: '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'
-        }
-
-        AWS.config.update({ accessKeyId: $scope.creds.access_key, secretAccessKey: $scope.creds.secret_key });
-        AWS.config.region = 'us-east-1';
-        var bucket = new AWS.S3({ params: { Bucket: $scope.creds.bucket } });
-
-        $scope.params = {
-            Bucket: 'spigot.download',
-        };
-        bucket.listObjects($scope.params, function (err, data) {
-            if (err) console.log(err, err.stack);
-            else {
-                $scope.$apply(function () {
-                    $scope.spigotversions = data.Contents;
-                });
+    .controller('SpigotCtrl', function ($scope, $filter, $http) {
+        $http.get('https://s3.amazonaws.com/spigot.download/',
+            {
+                transformResponse: function (data) {
+                    // convert the data to JSON and provide
+                    // it to the success function below
+                    var x2js = new X2JS();
+                    var json = x2js.xml_str2json(data);
+                    return json;
+                }
+            })
+            .success(function (data, status) {
+                // send the converted data back
+                // to the callback function
+                $scope.spigotversions = data.ListBucketResult.Contents;
 
                 console.log($scope.spigotversions);
-            }
-        })
+            });
     })
     .filter('extrakey', function () {
         return function (text) {
