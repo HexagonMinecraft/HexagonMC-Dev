@@ -8,7 +8,7 @@ gulp.task('serve', function () {
             baseDir: "./"
         }
     });
-    gulp.watch(["*.html", "app/*.js", "assets/**/*.*"]).on('change', browserSync.reload);
+    gulp.watch(["*.html", "app/*.js", "assets/**/*.*", "views/*"]).on('change', browserSync.reload);
 });
 
 gulp.task('default', ['serve']);
