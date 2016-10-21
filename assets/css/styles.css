@@ -13,6 +13,12 @@ body{
 .navbar-inverse{
     background-color:#519448;
 }
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus {
+    background-color:#407339;
+}
+.btn-success {
+    background-color:#519448;
+}
 .navbar-inverse .navbar-nav>li>a:hover,.navbar-inverse .navbar-nav>li>a:focus{
     color:#FFFFFF!important;
 }
