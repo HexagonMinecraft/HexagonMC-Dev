@@ -61,7 +61,7 @@
 					</tr>
 					<tr ng-repeat="v in spigotversions | filter:search | filter: {Key: '!versions/latest'} | filter: {Key: '!versions/'} : true | filter: {Key: '!scripts'}">
 						<td>{{v.Key | extrakey}}</td>
-						<td><a href="https://s3.amazonaws.com/spigot.download{{v.Key}}">Download</a></td>
+						<td><a href="https://s3.amazonaws.com/spigot.download/{{v.Key}}">Download</a></td>
 					</tr>
 				</tbody>
 			</table>
