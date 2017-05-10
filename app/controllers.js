@@ -1,14 +1,21 @@
 angular.module('app.controllers', ['app.services'])
-    .controller('HomeCtrl', function ($scope) {
-
-    })
-    .controller('HeaderCtrl', function ($scope, $http, githubApi) {
+    .controller('HomeCtrl', function ($scope, githubApi) {
         githubApi.get('orgs/HexagonMinecraft/repos').then(function (res) {
             $scope.repos = res.data;
             console.log($scope.repos);
         }).catch(function (err) {
             onError(err);
         });
+    })
+    .controller('HeaderCtrl', function ($scope, $http, githubApi) {
+        githubApi.get('orgs/HexagonMinecraft/repos').then(function (res) {
+            $scope.repos = res.data;
+        }).catch(function (err) {
+            onError(err);
+        });
+    })
+    .controller('FooterCtrl', function ($scope) {
+        $scope.thisYear = new Date().getFullYear();
     })
     .filter('extrakey', function () {
         return function (text) {
@@ -18,8 +25,7 @@ angular.module('app.controllers', ['app.services'])
         };
     })
     .controller('SpigotCtrl', function ($scope, $filter, $http) {
-        $http.get('https://s3.amazonaws.com/spigot.download/',
-            {
+        $http.get('https://s3.amazonaws.com/spigot.download/', {
                 transformResponse: function (data) {
                     // convert the data to JSON and provide
                     // it to the success function below

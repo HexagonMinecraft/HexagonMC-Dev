@@ -1,98 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="The HexagonMC Developer Center, home to a few open source projects.">
-	<meta name="author" content="HexagonMC">
-	<meta name="theme-color" content="#519448">
-	<link rel="icon" href="favicon.ico">
-	<title>HexagonMC Developer Center</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="description" content="The HexagonMC Developer Center, home to a few open source projects.">
+    <meta name="author" content="HexagonMC">
+    <meta name="theme-color" content="#519448">
+    <title>HexagonMC Developer Portal</title>
+    <base href="/">
 
-	<link href="https://bootswatch.com/paper/bootstrap.min.css" rel="stylesheet">
-
-	<link href="assets/css/styles.css" rel="stylesheet">
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
-<body ng-controller="HomeCtrl">
+<body ng-app="app">
+    <div ng-include="'views/header.html'"></div>
+    <div ui-view></div>
+    <div ng-include="'views/footer.html'"></div>
 
-	<div ng-include="'views/header.html'"></div>
+    <!--  Scripts-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
-	<div class="jumbotron">
-		<div class="container">
-			<div class="col-md-2">
-				<img src="img/hexagonmc.png" alt="HexagonMC Logo" class="pull-left img-responsive logo">
-			</div>
-			<div class="col-md-10">
-				<h1>Welcome</h1>
-				<p>This is where HexagonMC Dev keeps all of its development tools!</p>
-			</div>
-		</div>
-	</div>
+    <!-- NG JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script>
 
-	<div class="container">
+    <!-- App JS -->
+    <script src="app/app.js"></script>
+    <script src="app/controllers.js"></script>
+    <script src="app/services.js"></script>
 
-		<div class="row-fluid">
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="box">
-					<div class="box-icon">
-						<span class="fa fa-4x fa-cogs"></span>
-					</div>
-					<div class="site-info">
-						<h4 class="text-center">Jenkins</h4>
-						<p>Browse builds and continuous integration of some of our projects.</p>
-						<a href="https://ci.hexagonminecraft.com" title="HexagonMC Jenkins" target="_blank" class="btn btn-success">Go to Jenkins</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="box">
-					<div class="box-icon">
-						<span class="fa fa-4x fa-bug"></span>
-					</div>
-					<div class="site-info">
-						<h4 class="text-center">OpenProject</h4>
-						<p>Did you find a bug or want to add a feature? This is the place to go.</p>
-						<a href="https://issues.hexagonminecraft.com" title="Issues" target="_blank" class="btn btn-success">Go to OpenProject</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				<div class="box">
-					<div class="box-icon">
-						<span class="fa fa-4x fa-code-fork"></span>
-					</div>
-					<div class="site-info">
-						<h4 class="text-center">GitHub</h4>
-						<p>GitHub is where we keep all of our source code.</p>
-						<a href="http://github.com/HexagonMinecraft" title="GitHub" target="_blank" class="btn btn-success">Go to GitHub</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<hr>
-		<footer>
-			<p class="text-center">&copy; HexagonMC 2016. All rights reserved.</p>
-			<p class="text-center text-muted">
-				Built by <a href="https://github.com/nprail" target="_blank">nprail</a>
-		</footer>
-	</div>
-
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-
-	<!-- NG JS -->
-	<script src="app/app.js"></script>
-	<script src="app/controllers.js"></script>
-	<script src="app/services.js"></script>
 </body>
 
 </html>

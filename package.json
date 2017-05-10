@@ -1,7 +1,7 @@
 {
   "name": "hexagonmc-dev",
   "version": "1.0.0",
-  "description": "HexagonMC Dev Hub",
+  "description": "HexagonMC Developer Portal",
   "main": "Gulpfile.js",
   "dependencies": {},
   "devDependencies": {
